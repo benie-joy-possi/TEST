@@ -1,7 +1,6 @@
 name: discord notification
-on:
-  push:
-    branches: main
+on: [push]
+
 jobs: 
   build:
     name: Build
@@ -9,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: send a notification message
-      uses: appleboy/discord-action@master
+      uses: ./
       with:
         webhook_id: ${{ secrets.WEBHOOK_ID }}
         webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
