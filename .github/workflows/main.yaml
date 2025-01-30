@@ -1,0 +1,16 @@
+name: discord notification
+on:
+  push:
+    branches: main
+jobs: 
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: send a notification message
+      uses: appleboy/discord-action@master
+      with:
+        webhook_id: ${{ secrets.WEBHOOK_ID }}
+        webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+        message: "A new push has been done on the main branch"
