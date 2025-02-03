@@ -1,5 +1,5 @@
 
-name: discord notification
+name: a discord notification
 on: [push]
 jobs:
   send_notif:
