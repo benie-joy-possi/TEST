@@ -18,4 +18,4 @@ jobs:
                -d '{
                  "content": ":rocket: New push detected in the repository! Commit details: **${{ github.actor }}** just pushed to **${{ github.ref }}**."
                }' \
-               "${{ secrets.WEBHOOK_ID }}"
+               "${{ secrets.notif}}"
