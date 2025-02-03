@@ -1,10 +1,10 @@
 
-name:  Notify Discord of Commit
+name:  discord notification
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
